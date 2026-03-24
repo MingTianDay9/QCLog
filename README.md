@@ -13,6 +13,7 @@
 5.随时可变的日志等级过滤输出  
   
 使用例子  
+```
 #include <QCoreApplication>  
 #include "QCLog.h"  
 int main(int argc, char *argv[])  
@@ -38,7 +39,8 @@ int main(int argc, char *argv[])
     qclog::UnInstallLog();  
     qInfo() << "UnInstallLog";  
     return a.exec();  
-}  
+}
+```
 
 引入头文件后，用qclog::InstallLogFile和qclog::UnInstallLog两个方法即可覆盖日志使用场景。  
 
