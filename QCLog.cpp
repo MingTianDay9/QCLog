@@ -78,6 +78,8 @@ static bool TryOpenNewFile(){
         g_uFilePartNum = 0;
         isFullPartNum = false;
         g_fileLog.close();
+        //由于存在日期迭代，所以顺便看看有没有需要删除的过期日志
+        TryDeleteHistoryLog();
     }
     //获取路径前半部分:这里分片数可以继续增加，但日期一定要更新为最新
     const QString szFileBasePath = g_stLCfg.szDirPath + g_stLCfg.szFileName + g_dtLogFile.toString("yyyy-MM-dd");
