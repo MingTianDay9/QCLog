@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     return a.exec();  
 }  
 
-可以看出，引入头文件后，用qclog::InstallLogFile和qclog::UnInstallLog两个方法即可覆盖日志使用场景。  
+引入头文件后，用qclog::InstallLogFile和qclog::UnInstallLog两个方法即可覆盖日志使用场景。  
 
 在程序的其他运行时刻，也可以随时使用以下方法对日志消息进行等级过滤  
 qclog::SetLogLevel(qclog::ELogLevel::CRITICAL);  
